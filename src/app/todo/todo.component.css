@@ -1,0 +1,143 @@
+.app {
+    padding: 5em 2.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.container {
+  padding: 2em 2.5em;
+  width: 40%;
+  background: rgba(12, 12, 12, 0.6);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.4px);
+  -webkit-backdrop-filter: blur(8.4px);
+  border: 1px solid rgba(12, 12, 12, 0.37);
+}
+
+h2{
+  color: #fff;
+}
+
+img{
+  height: 50px;
+  width: 50px;
+}
+
+.wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.p1{
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+/*.wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 8fr 4fr;
+  gap: 1em;
+}*/
+
+.wrapper_tasks{
+    position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 1em;
+}
+
+input{
+  
+  width: 70%;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  border-bottom: 2px solid #d1d3d4;
+  color: #fff;
+}
+
+/*input {
+  width: 100%;
+  background-color: transparent;
+  color: #fff;
+  font-size: 0.9em;
+  border: none;
+  border-bottom: 2px solid #d1d3d4;
+  padding: 1em 0.5em;
+}*/
+
+input:focus {
+  outline: none;
+  border-color: #4a6741;
+}
+
+button{
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background: #4a6741;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+  -webkit-border-radius: 40px;
+  -moz-border-radius: 40px;
+  -ms-border-radius: 40px;
+  -o-border-radius: 40px;
+}
+
+/*button {
+  position: relative;
+  border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  font-size: 1em;
+  background-color: #4a6741;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+}*/
+
+ul{
+  list-style: none;
+  font-size: 17px;
+  padding: 12px,12px,12px,50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+
+
+p{
+
+    padding-top: 7px;
+    padding-bottom: 7px;
+    color: #fff;
+}
+
+.error {
+  text-align: center;
+  color: #fff;
+  margin-top: 1.5em;
+  padding: 1em 0;
+  display: none;
+}

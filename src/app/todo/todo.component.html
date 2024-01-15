@@ -1,0 +1,22 @@
+<div class="app">
+  <div class="container">
+    <h2>Lista de Tareas <img src="assets/to-do-list.png" alt="Imagen de lista de tareas"></h2>
+    <div class="wrapper">
+      <input [(ngModel)]='newTask' type="text" placeholder="Tareas por hacer..."/>
+      
+      <button (click)="addTask()"><i class="bi bi-clipboard2-plus"></i></button>
+    </div>
+      <p class="p1">Te faltan completar <span> {{count}} </span> tarea(s)</p><br>
+      <ul class="wrapper_tasks">
+        @for(task of tasks; track task.id){
+            <p>{{task.data}}</p>
+            <button (click)="deleteTask(task.id)"><i class="bi bi-trash-fill"></i></button>
+            
+        }
+      </ul>
+
+  </div>
+  @if (newTask.length === 0 && push) {
+    <p class="error" style="display: block;">Agrega una tarea por hacer!</p>
+}
+</div>
