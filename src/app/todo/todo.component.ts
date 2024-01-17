@@ -13,9 +13,14 @@ export class TodoComponent {
 
   push = false;
 
+  editpush = false;
+
+
   newTask = '';
 
-  tasks: { id: string; data: string }[] = [];
+  tasks: any = [];
+
+  taskID =  '';
 
   addTask() {
     const tasks = {
@@ -23,23 +28,34 @@ export class TodoComponent {
       data: this.newTask,
     };
 
+    if(this.editpush && this.taskID !== ''){
+      this.tasks[Number(this.taskID) - 1].data = this.newTask
+      this.editpush = false;
+      this.taskID = '';
+      return
+    }
+
     if (this.newTask.length === 0) {
-      this.count == this.tasks.length;
       this.push = true;
     } else {
       this.tasks.push(tasks);
       this.count++;
-      this.push = true;
-      
-      if(this.tasks.length >= 1){
-        this.newTask = '';
-        this.push = false;
-      }
+      this.newTask = '';
+      this.push = false;
     }
+    
+  }
+
+  editTask(taskId: string){
+    const i = Number(taskId)
+    this.newTask = this.tasks[i - 1].data
+    this.editpush = true;
+    this.taskID = this.tasks[i - 1].id
+    console.log(this.tasks)
   }
 
   deleteTask(taskId: string) {
-    this.tasks = this.tasks.filter((task) => task.id != taskId);
+    this.tasks = this.tasks.filter((task: { id: string; }) => task.id != taskId);
     this.count = this.tasks.length;
   }
 

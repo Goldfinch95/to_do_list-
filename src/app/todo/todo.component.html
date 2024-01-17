@@ -10,6 +10,7 @@
       <ul class="wrapper_tasks">
         @for(task of tasks; track task.id){
             <p>{{task.data}}</p>
+            <button (click)="editTask(task.id)">Editar</button>
             <button (click)="deleteTask(task.id)"><i class="bi bi-trash-fill"></i></button>
             
         }
